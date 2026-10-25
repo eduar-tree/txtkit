@@ -96,6 +96,15 @@ iconv -f gbk -t utf-8 app.log > app.utf8.log
 python test_txtkit.py
 ```
 
+---
+
+## 关于作者
+
+eduar-tree 写日志排查与文本处理的纯标准库小工具。这个工具默认用 Unix 风格，输出能直接接进管道。
+
+- 个人主页：<https://eduar-tree.github.io>
+- 仓库：<https://github.com/eduar-tree/txtkit>
+
 ## 许可
 
 MIT，见 [LICENSE](LICENSE)。
