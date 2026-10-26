@@ -9,6 +9,23 @@
 - 单文件，`txtkit.py` 拷走就能用
 - 中文按字符统计，不会把一个汉字算成一个"词"
 
+<!-- ipos:install -->
+## 安装
+
+零依赖，Python 3.10+ 即可：
+
+```bash
+pip install eduar-tree-txtkit
+```
+
+装完直接用命令名调用：
+
+```bash
+txtkit --help
+```
+
+也可以不用安装，直接把 `txtkit.py` 拷走用——它只依赖标准库。
+
 ## 三个子命令
 
 ### count —— 看清一个文件有多大
