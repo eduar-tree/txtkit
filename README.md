@@ -26,7 +26,9 @@ txtkit --help
 
 也可以不用安装，直接把 `txtkit.py` 拷走用——它只依赖标准库。
 
-## 三个子命令
+## 用法
+
+`txtkit` 有三个子命令。
 
 ### count —— 看清一个文件有多大
 
@@ -87,6 +89,33 @@ python txtkit.py slice app.log --chars 0:500
 | `10` | 只有第 10 行 |
 | `10:` | 第 10 行到结尾 |
 | `:30` | 从开头到第 30 行 |
+
+## 输出
+
+三个子命令的输出都是纯文本，可以直接接进管道：
+
+```bash
+# count 输出键值对，一行一个
+python txtkit.py count access.log
+
+# find 输出命中行与上下文，> 标记命中行
+python txtkit.py find app.log "ERROR" --context 2
+
+# slice 只输出取到的那一段，原样输出，不加任何标记
+python txtkit.py slice app.log --lines 10:30
+```
+
+`count` 的输出示例：
+
+```
+characters           1048576
+characters_no_space   921344
+lines                  18432
+blank_lines             310
+words_latin            21093
+cjk_characters            0
+total_words            21093
+```
 
 ## 编码处理
 
